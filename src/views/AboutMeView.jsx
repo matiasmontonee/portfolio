@@ -11,8 +11,8 @@ const AboutMeView = () => {
   });
   const { isEnglish } = useLanguage();
   const [cvFile] = useState({
-    en: `${process.env.PUBLIC_URL}/CV-EN.pdf`,
-    es: `${process.env.PUBLIC_URL}/CV-ES.pdf`
+    en: `${process.env.PUBLIC_URL}/EN-MATIAS-MONTONE.pdf`,
+    es: `${process.env.PUBLIC_URL}/ES-MATIAS-MONTONE.pdf`
   });
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const AboutMeView = () => {
             <FaArrowRight size={36} className="mr-2 arrow-right lg:ml-12" />
             <h2 className="text-3xl sm:text-5xl font-bold">{isEnglish ? 'About Me' : 'Sobre Mí'}</h2>
           </div>
-          <p className="text-lg mt-2 lg:ml-12">{isEnglish ? 'Hello! My name is Matías Montone, I am a 22-year-old front-end web developer.' : '¡Hola! Mi nombre es Matías Montone, soy un desarrollador web front-end de 22 años.'}</p>
+          <p className="text-lg mt-2 lg:ml-12">{isEnglish ? 'Hello! My name is Matías Montone, I am a 22-year-old Full Stack Web Developer.' : '¡Hola! Mi nombre es Matías Montone, soy un Desarrollador Web Full Stack de 22 años.'}</p>
           <p className="text-lg mt-2 lg:ml-12">{isEnglish ? 'I live in Buenos Aires, Argentina, and I am constantly developing projects to keep up to date with technology updates. I always seek to improve day by day and grow as a professional, in order to be able to work both in a team or as a freelancer.' : 'Vivo en Buenos Aires, Argentina y estoy constantemente desarrollando proyectos para mantenerme al día con las actualizaciones tecnológicas. Siempre busco mejorar día a día y crecer como profesional, para poder trabajar tanto en equipo como freelance.'}</p>
           <p className="text-lg mt-2 lg:ml-12">{isEnglish ? 'I started studying web design and development in 2021 at the Da Vinci School, where I learned most of my knowledge, including web development, web design, digital marketing and IOT.' : 'Comencé a estudiar diseño y desarrollo web en 2021 en la Escuela Da Vinci, donde aprendí la mayor parte de mis conocimientos, incluyendo desarrollo web, diseño web, marketing digital e IOT.'}</p>
           <div className="btn-container mt-4 lg:ml-12 flex flex-col md:flex-row">
