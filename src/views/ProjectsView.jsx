@@ -117,7 +117,7 @@ const ProjectsView = () => {
               </div>
             </div>
           </div>
-          {index === 4 && (
+          {index === 5 && (
             <div className="accordion mt-8">
               <p className="text-lg sm:text-2xl text-gray-400 flex items-center">
                 {isEnglish ? 'Upcoming projects' : 'Próximos proyectos'}<FaTools className="ml-3 text-blue-500" />
