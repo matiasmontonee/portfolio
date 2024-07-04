@@ -2,6 +2,9 @@ import Fxw1      from '../assets/imgs/projects/fxw/01-fxw.png';
 import Fxw2      from '../assets/imgs/projects/fxw/02-fxw.png';
 import Fxw3      from '../assets/imgs/projects/fxw/03-fxw.png';
 import Fxw4      from '../assets/imgs/projects/fxw/04-fxw.png';
+import Sas1      from '../assets/imgs/projects/security-and-system/01-sas.png';
+import Sas2      from '../assets/imgs/projects/security-and-system/02-sas.png';
+import Sas3      from '../assets/imgs/projects/security-and-system/03-sas.png';
 import Five1     from '../assets/imgs/projects/five-stars/01-five-stars.png';
 import Five2     from '../assets/imgs/projects/five-stars/02-five-stars.png';
 import Five3     from '../assets/imgs/projects/five-stars/03-five-stars.png';
@@ -28,6 +31,7 @@ import Cutler2   from '../assets/imgs/projects/cutler/02-cutler.png';
 import Cutler3   from '../assets/imgs/projects/cutler/03-cutler.png';
 import Cutler4   from '../assets/imgs/projects/cutler/04-cutler.png';
 import TailwindIcon from '../assets/imgs/tailwind-icon.png';
+import NextIcon from '../assets/imgs/next-icon.png';
 
 const projects = [
     {
@@ -41,6 +45,18 @@ const projects = [
       website: 'https://fx-w.vercel.app/',
       github: 'https://github.com/matiasmontonee/FxW',
       tailwindIcon: TailwindIcon
+    },
+    {
+      images: [Sas1, Sas2, Sas3],
+      title: "Security and System",
+      "description": {
+      "en": "A website showcasing a user profile with sections such as About Me, Interests, and Contact. It is a technical test mainly developed with Next.js for the Security and System company.",
+      "es": "Página web que muestra un perfil de usuario con secciones como acerca de mí, intereses y contacto. Es una prueba técnica realizada principalmente con Next.js para la empresa Security and System."
+      },
+      icons: ["FaHtml5", "FaCss3", "FaJs", "FaReact"],
+      website: 'https://security-and-system.vercel.app/',
+      github: 'https://github.com/matiasmontonee/security_and_system',
+      tailwindIcon: NextIcon
     },
     {
       images: [Five1, Five2, Five3, Five4],
