@@ -5,8 +5,8 @@ import { useLanguage } from '../context/Language';
 const Footer = () => {
   const { isEnglish } = useLanguage();
   const [cvFile] = useState({
-    en: `${process.env.PUBLIC_URL}/CV-EN.pdf`,
-    es: `${process.env.PUBLIC_URL}/CV-ES.pdf`
+    en: `${process.env.PUBLIC_URL}/EN-MATIAS-MONTONE.pdf`,
+    es: `${process.env.PUBLIC_URL}/ES-MATIAS-MONTONE.pdf`
   });
   
   return (
