@@ -34,7 +34,7 @@ const HomeView = () => {
               {isEnglish ? 'Welcome!' : '¡Bienvenido!'}
             </div>
           </div>
-          <h2 className="text-xl md:text-3xl mt-4 typing-animation">Front-end Developer</h2>
+          <h2 className="text-xl md:text-3xl mt-4 typing-animation">Full Stack Developer</h2>
           <p className="text-md md:text-lg mt-4">{isEnglish ? 'Let\'s create something together!' : '¡Creemos algo juntos!'}</p>
 
           <div className="flex mt-4 icon-container">
