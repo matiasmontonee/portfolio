@@ -17,9 +17,10 @@ import PhpIcon from '../assets/imgs/skills/php.png';
 import LaravelIcon from '../assets/imgs/skills/laravel.png';
 import MysqlIcon from '../assets/imgs/skills/mysql.png';
 import FirebaseIcon from '../assets/imgs/skills/firebase.png';
+import GitIcon from '../assets/imgs/skills/git.png';
+import GithubIcon from '../assets/imgs/skills/github.png';
 import PsIcon from '../assets/imgs/skills/photoshop.png';
 import IllIcon from '../assets/imgs/skills/illustrator.png';
-import GithubIcon from '../assets/imgs/skills/github.png';
 import WordpressIcon from '../assets/imgs/skills/wordpress.png';
 
 const skillsData = [
@@ -39,6 +40,7 @@ const skillsData = [
   { name: 'Laravel', icon: LaravelIcon },
   { name: 'MySQL', icon: MysqlIcon },
   { name: 'Firebase', icon: FirebaseIcon },
+  { name: 'Git', icon: GitIcon },
   { name: 'GitHub', icon: GithubIcon },
   { name: 'Photoshop', icon: PsIcon },
   { name: 'Illustrator', icon: IllIcon },
@@ -109,7 +111,7 @@ const SkillsView = () => {
         {backEndSkills}
       </div>
       <p className="text-lg sm:text-2xl text-gray-500 flex items-center mt-2 mb-4 skill">
-        {isEnglish ? 'Others' : 'Otras'} <FaPen className="ml-3 text-blue-500" />
+        {isEnglish ? 'Tools' : 'Herramientas'} <FaPen className="ml-3 text-blue-500" />
       </p>
       <div className="responsive-mobile flex flex-wrap justify-between sm:justify-start">
         {otherSkills}
