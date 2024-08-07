@@ -6,10 +6,8 @@ import CssIcon from '../assets/imgs/skills/css3.png';
 import BootstrapIcon from '../assets/imgs/skills/bootstrap.png';
 import TailwindIcon from '../assets/imgs/skills/tailwind.png';
 import JsIcon from '../assets/imgs/skills/javascript.png';
-import VueIcon from '../assets/imgs/skills/vue.png';
 import ReactIcon from '../assets/imgs/skills/react.png';
-import ReduxIcon from '../assets/imgs/skills/redux.png';
-import NextIcon from '../assets/imgs/skills/next.png';
+import VueIcon from '../assets/imgs/skills/vue.png';
 import NodeIcon from '../assets/imgs/skills/node.png';
 import ExIcon from '../assets/imgs/skills/express.png';
 import MongoIcon from '../assets/imgs/skills/mongodb.png';
@@ -29,10 +27,8 @@ const skillsData = [
   { name: 'Bootstrap', icon: BootstrapIcon },
   { name: 'Tailwind', icon: TailwindIcon },
   { name: 'JavaScript', icon: JsIcon },
-  { name: 'Vue', icon: VueIcon },
   { name: 'React', icon: ReactIcon },
-  { name: 'Redux', icon: ReduxIcon },
-  { name: 'Next.js', icon: NextIcon },
+  { name: 'Vue', icon: VueIcon },
   { name: 'Node.js', icon: NodeIcon },
   { name: 'Express.js', icon: ExIcon },
   { name: 'MongoDB', icon: MongoIcon },
@@ -71,21 +67,21 @@ const SkillsView = () => {
     };
   }, []);
 
-  const frontEndSkills = skillsData.slice(0, 9).map((skill, index) => (
+  const frontEndSkills = skillsData.slice(0, 7).map((skill, index) => (
     <div key={index} className="border border-gray-700 rounded-lg mb-4 sm:mr-4 p-4 sm:p-8 w-24 sm:w-32 flex flex-col items-center skill skill-hover" style={{ boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.7)', background: 'linear-gradient(to bottom right, rgba(145,145,145,1) 0%, rgba(255,255,255,1) 100%)' }}>
       <img src={skill.icon} alt={skill.name} className="h-16 object-contain mb-4" />
       <span className="sm:text-lg">{skill.name}</span>
     </div>
   ));
 
-  const backEndSkills = skillsData.slice(9, 16).map((skill, index) => (
+  const backEndSkills = skillsData.slice(7, 14).map((skill, index) => (
     <div key={index} className="border border-gray-700 rounded-lg mb-4 sm:mr-4 p-4 sm:p-8 w-24 sm:w-32 flex flex-col items-center skill skill-hover" style={{ boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.7)', background: 'linear-gradient(to bottom right, rgba(145,145,145,1) 0%, rgba(255,255,255,1) 100%)' }}>
       <img src={skill.icon} alt={skill.name} className="h-16 object-contain mb-4" />
       <span className="sm:text-lg">{skill.name}</span>
     </div>
   ));
 
-  const otherSkills = skillsData.slice(16).map((skill, index) => (
+  const otherSkills = skillsData.slice(14).map((skill, index) => (
     <div key={index} className="border border-gray-700 rounded-lg mb-4 sm:mr-4 p-4 sm:p-8 w-24 sm:w-32 flex flex-col items-center skill skill-hover" style={{ boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.7)', background: 'linear-gradient(to bottom right, rgba(145,145,145,1) 0%, rgba(255,255,255,1) 100%)' }}>
       <img src={skill.icon} alt={skill.name} className="h-16 object-contain mb-4" />
       <span className="sm:text-lg">{skill.name}</span>
