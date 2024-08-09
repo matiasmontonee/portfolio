@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaArrowRight, FaArrowUp, FaArrowDown, FaHtml5, FaCss3, FaJs, FaBootstrap, FaVuejs, FaReact, FaPhp, FaGithub, FaCheckCircle, FaTools, FaExternalLinkAlt, FaBan } from 'react-icons/fa';
+import { FaArrowRight, FaArrowUp, FaArrowDown, FaHtml5, FaCss3, FaJs, FaBootstrap, FaVuejs, FaReact, FaPhp, FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { useLanguage } from '../context/Language'; 
 import projects from '../data/projects';
 
@@ -71,9 +71,6 @@ const ProjectsView = () => {
         <FaArrowRight size={36} className="mr-2 arrow-right" />
         <h2 className="text-3xl sm:text-5xl font-bold text-white">{isEnglish ? 'Projects' : 'Proyectos'}</h2>
       </div>
-      <p className="text-lg sm:text-2xl text-gray-400 mt-6 flex items-center accordion">
-        {isEnglish ? 'Finished projects' : 'Proyectos terminados'} <FaCheckCircle className="ml-3 text-blue-500" />
-      </p>
 
       {projects.map((project, index) => (
         <div key={index} className="accordion mt-8">
@@ -105,25 +102,12 @@ const ProjectsView = () => {
                   {project.tailwindIcon && <img src={project.tailwindIcon} alt="Tailwind Icon" style={{ objectFit: 'contain', marginLeft: '4px' }} className='tailwind-img' />}
                 </div>
                 <div className="flex items-end text-3xl sm:text-4xl">
-                  {index >= projects.length - 4 ? (
-                    <FaBan />
-                  ) : (
-                    <>
-                      <a href={project.github} className='git-hover' target="_blank" rel="noreferrer"><FaGithub /></a>
-                      <a href={project.website} className='web-hover ml-2 sm:ml-4' target="_blank" rel="noreferrer"><FaExternalLinkAlt /></a>
-                    </>
-                  )}
+                  <a href={project.github} className='git-hover' target="_blank" rel="noreferrer"><FaGithub /></a>
+                  <a href={project.website} className='web-hover ml-2 sm:ml-4' target="_blank" rel="noreferrer"><FaExternalLinkAlt /></a>
                 </div>
               </div>
             </div>
           </div>
-          {index === 5 && (
-            <div className="accordion mt-8">
-              <p className="text-lg sm:text-2xl text-gray-400 flex items-center">
-                {isEnglish ? 'Upcoming projects' : 'Próximos proyectos'}<FaTools className="ml-3 text-blue-500" />
-              </p>
-            </div>
-          )}
         </div>
       ))}
     </section>
