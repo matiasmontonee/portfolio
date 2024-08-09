@@ -2,6 +2,10 @@ import Fxw1      from '../assets/imgs/projects/fxw/01-fxw.png';
 import Fxw2      from '../assets/imgs/projects/fxw/02-fxw.png';
 import Fxw3      from '../assets/imgs/projects/fxw/03-fxw.png';
 import Fxw4      from '../assets/imgs/projects/fxw/04-fxw.png';
+import Levrone1  from '../assets/imgs/projects/levrone/01-levrone.png';
+import Levrone2  from '../assets/imgs/projects/levrone/02-levrone.png';
+import Levrone3  from '../assets/imgs/projects/levrone/03-levrone.png';
+import Levrone4  from '../assets/imgs/projects/levrone/04-levrone.png';
 import Sas1      from '../assets/imgs/projects/security-and-system/01-sas.png';
 import Sas2      from '../assets/imgs/projects/security-and-system/02-sas.png';
 import Sas3      from '../assets/imgs/projects/security-and-system/03-sas.png';
@@ -18,18 +22,6 @@ import Todo2     from '../assets/imgs/projects/todo-app/02-todo-app.png';
 import Pokeapi1  from '../assets/imgs/projects/poke-api/01-poke-api.png';
 import Pokeapi2  from '../assets/imgs/projects/poke-api/02-poke-api.png';
 import Pokeapi3  from '../assets/imgs/projects/poke-api/03-poke-api.png';
-import Vuestore1 from '../assets/imgs/projects/vuejstore/01-vuejstore.png';
-import Vuestore2 from '../assets/imgs/projects/vuejstore/02-vuejstore.png';
-import Music1    from '../assets/imgs/projects/music-shop/01-music-shop.png';
-import Music2    from '../assets/imgs/projects/music-shop/02-music-shop.png';
-import Music3    from '../assets/imgs/projects/music-shop/03-music-shop.png';
-import Music4    from '../assets/imgs/projects/music-shop/04-music-shop.png';
-import Starwars1 from '../assets/imgs/projects/starwars-api/01-starwars-api.png';
-import Starwars2 from '../assets/imgs/projects/starwars-api/02-starwars-api.png';
-import Cutler1   from '../assets/imgs/projects/cutler/01-cutler.png';
-import Cutler2   from '../assets/imgs/projects/cutler/02-cutler.png';
-import Cutler3   from '../assets/imgs/projects/cutler/03-cutler.png';
-import Cutler4   from '../assets/imgs/projects/cutler/04-cutler.png';
 import TailwindIcon from '../assets/imgs/tailwind-icon.png';
 import NextIcon from '../assets/imgs/next-icon.png';
 
@@ -44,6 +36,18 @@ const projects = [
       icons: ["FaHtml5", "FaJs", "FaVuejs"],
       website: 'https://fx-w.vercel.app/',
       github: 'https://github.com/matiasmontonee/FxW',
+      tailwindIcon: TailwindIcon
+    },
+    {
+      images: [Levrone1, Levrone2, Levrone3, Levrone4],
+      title: "Levrone",
+      "description": {
+        "en": "Website for sales of training articles and supplements. Includes home section, registration, shopping cart, products, forum, blog, purchase registration, affiliate program, among others.",
+        "es": "Sitio de ventas de artículos de entrenamiento y suplementos. Incluye sección de inicio, registro, carrito de compras, productos, foro, blog, registro de compras, programa de afiliados, entre otros."
+      },
+      icons: ["FaHtml5", "FaCss3", "FaJs", "FaReact"],
+      website: 'https://levrone.vercel.app/',
+      github: 'https://github.com/matiasmontonee/levrone',
       tailwindIcon: TailwindIcon
     },
     {
@@ -103,51 +107,6 @@ const projects = [
       website: 'https://pokeapi-website.vercel.app',
       github: 'https://github.com/matiasmontonee/pokeapi',
       tailwindIcon: TailwindIcon 
-    },
-    {
-      images: [Vuestore1, Vuestore2],
-      title: "VueJStore",
-      "description": {
-        "en": "Simulation of a virtual store dedicated to the sale of technological devices. The products can be found through a search engine. It has a shopping cart, payment gateway and contact section.",
-        "es": "Simulación de una tienda virtual dedicada a la venta de dispositivos tecnológicos. Los productos se pueden encontrar a través de un motor de búsqueda. Dispone de carrito de compra, pasarela de pago y apartado de contacto."
-      },
-      icons: ["FaHtml5", "FaCss3", "FaJs", "FaVuejs"],
-      website: '',
-      github: ''
-    },
-    {
-      images: [Music1, Music2, Music3, Music4],
-      title: "Music Shop",
-      "description": {
-        "en": "Virtual store of musical CDS obtained from a SQL database. It has registration, login, products, contact, administrator panel and abm operations.",
-        "es": "Tienda virtual de CDS musicales obtenidos de una base de datos SQL. Tiene operaciones de registro, inicio de sesión, productos, contacto, panel de administrador y abm."
-      },
-      icons: ["FaHtml5", "FaCss3", "FaPhp"],
-      website: '',
-      github: ''
-    },
-    {
-      images: [Starwars1, Starwars2],
-      title: "Starwars API",
-      "description": {
-        "en": "Informational site for Starwars characters obtained from The Stars Wars API. Each character has a details section and can be searched using a search engine.",
-        "es": "Sitio informativo para personajes de Starwars obtenidos de The Stars Wars API. Cada personaje tiene una sección de detalles y se puede buscar mediante un motor de búsqueda."
-      },
-      icons: ["FaHtml5", "FaCss3", "FaJs", "FaReact", "FaBootstrap"],
-      website: '',
-      github: ''
-    },
-    {
-      images: [Cutler1, Cutler2, Cutler3, Cutler4],
-      title: "Cutler",
-      "description": {
-        "en": "Website for sales of training articles and supplements. It includes sections for home, registration, shopping cart, products, seller administration panel, among others.",
-        "es": "Sitio de ventas de artículos de entrenamiento y suplementos. Incluye secciones de inicio, registro, carrito de compras, productos, panel de administración para el vendedor, entre otros."
-      },
-      icons: ["FaHtml5", "FaCss3", "FaJs", "FaReact"],
-      website: '',
-      github: '',
-      tailwindIcon: TailwindIcon
     }
   ];
   
