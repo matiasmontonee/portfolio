@@ -3,8 +3,7 @@ import { FaArrowRight } from 'react-icons/fa';
 import { useLanguage } from '../context/Language'; 
 import db from "../firebase.js";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
-import SuccessModal from '../components/SuccessModal';
-import ErrorModal from '../components/ErrorModal';
+import Modal from '../components/Modal.jsx';
 
 const ContactView = () => {
   const [name, setName] = useState('');
@@ -13,8 +12,8 @@ const ContactView = () => {
   const [nameError, setNameError] = useState('');
   const [emailError, setEmailError] = useState('');
   const [commentError, setCommentError] = useState('');
-  const [showSuccessModal, setShowSuccessModal] = useState(false);
-  const [showErrorModal, setShowErrorModal] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
   const { isEnglish } = useLanguage();
 
   const handleSubmit = async (event) => {
@@ -52,13 +51,15 @@ const ContactView = () => {
       await addDoc(collection(db, "contact"), {
         name, email, comment, timestamp: serverTimestamp()
       });
-      setShowSuccessModal(true);
+      setIsSuccess(true);
       setName('');
       setEmail('');
       setComment('');
     } catch (error) {
-      setShowErrorModal(true);
+      setIsSuccess(false);
       console.error('Error:', error);
+    } finally {
+      setShowModal(true);
     }
   };
 
@@ -117,8 +118,8 @@ const ContactView = () => {
           <button type="submit" className="submit-hover border rounded-full text-white font-bold py-2 text-center inline-block w-28 contact">{isEnglish ? 'Submit' : 'Enviar'}</button>
         </div>
       </form>
-      {showSuccessModal && <SuccessModal onClose={() => setShowSuccessModal(false)} />}
-      {showErrorModal && <ErrorModal onClose={() => setShowErrorModal(false)} />}
+      
+      {showModal && <Modal onClose={() => setShowModal(false)} isSuccess={isSuccess} />}
     </section>
   );
 };
