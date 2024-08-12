@@ -74,7 +74,7 @@ const ProjectsView = () => {
         <h2 className="text-3xl sm:text-5xl font-bold text-white">{isEnglish ? 'Projects' : 'Proyectos'}</h2>
       </div>
 
-      <p className='text-white mt-8 text-lg sm:text-2xl flex items-center'>{isEnglish ? 'All my work done' : 'Todos mis trabajos realizados'} <FaTools className='text-blue-500 ml-2' /></p>
+      <p className='text-white mt-8 text-lg sm:text-2xl flex items-center accordion'>{isEnglish ? 'All my work done' : 'Todos mis trabajos realizados'} <FaTools className='text-blue-500 ml-2' /></p>
 
       {projects.map((project, index) => (
         <div key={index} className="accordion mt-8">
