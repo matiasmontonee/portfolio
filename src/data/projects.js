@@ -6,6 +6,14 @@ import Levrone1  from '../assets/imgs/projects/levrone/01-levrone.png';
 import Levrone2  from '../assets/imgs/projects/levrone/02-levrone.png';
 import Levrone3  from '../assets/imgs/projects/levrone/03-levrone.png';
 import Levrone4  from '../assets/imgs/projects/levrone/04-levrone.png';
+import Tenis1  from '../assets/imgs/projects/tenis-shop/01-tenis.png';
+import Tenis2  from '../assets/imgs/projects/tenis-shop/02-tenis.png';
+import Tenis3  from '../assets/imgs/projects/tenis-shop/03-tenis.png';
+import Tenis4  from '../assets/imgs/projects/tenis-shop/04-tenis.png';
+import Music1  from '../assets/imgs/projects/music-shop/01-music.png';
+import Music2  from '../assets/imgs/projects/music-shop/02-music.png';
+import Music3  from '../assets/imgs/projects/music-shop/03-music.png';
+import Music4  from '../assets/imgs/projects/music-shop/04-music.png';
 import Sas1      from '../assets/imgs/projects/security-and-system/01-sas.png';
 import Sas2      from '../assets/imgs/projects/security-and-system/02-sas.png';
 import Sas3      from '../assets/imgs/projects/security-and-system/03-sas.png';
@@ -49,6 +57,26 @@ const projects = [
       website: 'https://levrone.vercel.app/',
       github: 'https://github.com/matiasmontonee/levrone',
       tailwindIcon: TailwindIcon
+    },
+    {
+      images: [Tenis1, Tenis2, Tenis3, Tenis4],
+      title: "Tennis Shop",
+      "description": {
+        "en": "Website for sales of tennis rackets. It includes three types of user, shopping cart, administration panel, dashboard and payment gateway with Mercado Pago Sandbox.",
+        "es": "Sitio de ventas de raquetas de tenis. Incluye tres tipos de usuario, carrito de compras, panel de administración, dashboard y pasarela de pago con Mercado Pago Sandbox."
+      },
+      icons: ["FaHtml5", "FaCss3", "FaBootstrap", "FaPhp", "FaLaravel"],
+      github: 'https://github.com/matiasmontonee/tenis-shop',
+    },
+    {
+      images: [Music1, Music2, Music3, Music4],
+      title: "Music Shop",
+      "description": {
+        "en": "Website for sales of cds. Includes home section, registration, contact, shopping cart, products, purchase record and administration panel.",
+        "es": "Sitio de ventas de cds. Incluye sección de inicio, registro, contacto, carrito de compras, productos, registro de compras y panel de administración."
+      },
+      icons: ["FaHtml5", "FaCss3", "FaPhp"],
+      github: 'https://github.com/matiasmontonee/music-shop',
     },
     {
       images: [Sas1, Sas2, Sas3],
