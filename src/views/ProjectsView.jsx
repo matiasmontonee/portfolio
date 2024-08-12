@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaArrowRight, FaArrowUp, FaArrowDown, FaHtml5, FaCss3, FaJs, FaBootstrap, FaVuejs, FaReact, FaPhp, FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaArrowRight, FaArrowUp, FaArrowDown, FaHtml5, FaCss3, FaJs, FaBootstrap, FaVuejs, FaReact, FaPhp, FaLaravel, FaGithub, FaExternalLinkAlt, FaTools } from 'react-icons/fa';
 import { useLanguage } from '../context/Language'; 
 import projects from '../data/projects';
 
@@ -59,6 +59,8 @@ const ProjectsView = () => {
           return <FaReact key={index} className="mr-1" />;
         case "FaPhp":
           return <FaPhp key={index} className="mr-1" />;
+        case "FaLaravel":
+          return <FaLaravel key={index} className="mr-1" />;
         default:
           return null;
       }
@@ -71,6 +73,8 @@ const ProjectsView = () => {
         <FaArrowRight size={36} className="mr-2 arrow-right" />
         <h2 className="text-3xl sm:text-5xl font-bold text-white">{isEnglish ? 'Projects' : 'Proyectos'}</h2>
       </div>
+
+      <p className='text-white mt-8 text-lg sm:text-2xl flex items-center'>{isEnglish ? 'All my work done' : 'Todos mis trabajos realizados'} <FaTools className='text-blue-500 ml-2' /></p>
 
       {projects.map((project, index) => (
         <div key={index} className="accordion mt-8">
@@ -103,7 +107,9 @@ const ProjectsView = () => {
                 </div>
                 <div className="flex items-end text-3xl sm:text-4xl">
                   <a href={project.github} className='git-hover' target="_blank" rel="noreferrer"><FaGithub /></a>
-                  <a href={project.website} className='web-hover ml-2 sm:ml-4' target="_blank" rel="noreferrer"><FaExternalLinkAlt /></a>
+                  {index !== 2 && index !== 3 && (
+                    <a href={project.website} className='web-hover ml-2 sm:ml-4' target="_blank" rel="noreferrer"><FaExternalLinkAlt /></a>
+                  )}
                 </div>
               </div>
             </div>
