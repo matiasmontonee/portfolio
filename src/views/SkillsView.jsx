@@ -17,6 +17,7 @@ import MysqlIcon from '../assets/imgs/skills/mysql.png';
 import FirebaseIcon from '../assets/imgs/skills/firebase.png';
 import GitIcon from '../assets/imgs/skills/git.png';
 import GithubIcon from '../assets/imgs/skills/github.png';
+import InsomniaIcon from '../assets/imgs/skills/insomnia.png';
 import PsIcon from '../assets/imgs/skills/photoshop.png';
 import IllIcon from '../assets/imgs/skills/illustrator.png';
 import WordpressIcon from '../assets/imgs/skills/wordpress.png';
@@ -38,9 +39,10 @@ const skillsData = [
   { name: 'Firebase', icon: FirebaseIcon },
   { name: 'Git', icon: GitIcon },
   { name: 'GitHub', icon: GithubIcon },
+  { name: 'Insomnia', icon: InsomniaIcon },
   { name: 'Photoshop', icon: PsIcon },
   { name: 'Illustrator', icon: IllIcon },
-  { name: 'WordPress', icon: WordpressIcon },
+  { name: 'WordPress', icon: WordpressIcon }
 ];
 
 const SkillsView = () => {
