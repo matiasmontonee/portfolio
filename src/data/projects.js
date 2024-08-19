@@ -60,7 +60,7 @@ const projects = [
     },
     {
       images: [Tenis1, Tenis2, Tenis3, Tenis4],
-      title: "Tennis Shop",
+      title: "TeniShop",
       "description": {
         "en": "Website for sales of tennis rackets. It includes three types of user, shopping cart, administration panel, dashboard and payment gateway with Mercado Pago Sandbox.",
         "es": "Sitio de ventas de raquetas de tenis. Incluye tres tipos de usuario, carrito de compras, panel de administración, dashboard y pasarela de pago con Mercado Pago Sandbox."
