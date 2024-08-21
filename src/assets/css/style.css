@@ -63,7 +63,8 @@ p, span, a, button {
 /* NAVBAR */
 
 .logo:hover {
-  filter: brightness(0.7); 
+  filter: brightness(0.7);
+  transition: 0.5 ease;
 }
 
 .nav-link {
@@ -284,12 +285,7 @@ p, span, a, button {
   transform: rotate(360deg);
 }
 
-.web-hover:hover {
-  color: #3182ce;
-  transition: 0.5s ease;
-}
-
-.git-hover:hover {
+.web-hover:hover, .github-hover:hover {
   color: #3182ce;
   transition: 0.5s ease;
 }
@@ -361,7 +357,12 @@ p, span, a, button {
 
 .skill-hover:hover {
   transform: scale(1.05);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s;
+}
+
+.skill-hover:not(:hover) {
+  transform: scale(1);
+  transition: transform 0.3s;
 }
 
 @media screen and (min-width: 448px) and (max-width: 640px) {
@@ -414,5 +415,11 @@ p, span, a, button {
 
 .icon-container2 a:hover {
   color: #3182ce;
+  transition: 0.5s ease;
+}
+
+/* HOVER INVERSO */
+
+.icon-container a, .btn-container a, .accordion-bar, .web-hover, .github-hover, .submit-hover, .icon-container2 a {
   transition: 0.5s ease;
 }
