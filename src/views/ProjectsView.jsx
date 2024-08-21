@@ -106,7 +106,7 @@ const ProjectsView = () => {
                   {project.tailwindIcon && <img src={project.tailwindIcon} alt="Tailwind Icon" style={{ objectFit: 'contain', marginLeft: '4px' }} className='tailwind-img' />}
                 </div>
                 <div className="flex items-end text-3xl sm:text-4xl">
-                  <a href={project.github} className='git-hover' target="_blank" rel="noreferrer"><FaGithub /></a>
+                  <a href={project.github} className='github-hover' target="_blank" rel="noreferrer"><FaGithub /></a>
                   {index !== 2 && index !== 3 && (
                     <a href={project.website} className='web-hover ml-2 sm:ml-4' target="_blank" rel="noreferrer"><FaExternalLinkAlt /></a>
                   )}
