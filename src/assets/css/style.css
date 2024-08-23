@@ -357,12 +357,10 @@ p, span, a, button {
 
 .skill-hover:hover {
   transform: scale(1.05);
-  transition: transform 0.3s;
 }
 
 .skill-hover:not(:hover) {
   transform: scale(1);
-  transition: transform 0.3s;
 }
 
 @media screen and (min-width: 448px) and (max-width: 640px) {
@@ -379,11 +377,11 @@ p, span, a, button {
 
 .skill {
   opacity: 0;
-  transition: opacity 1s ease-in-out;
 }
 
 .skill.in-viewport {
   opacity: 1;
+  transition: 0.5s ease-in-out;
 }
 
 /* CONTACT */
