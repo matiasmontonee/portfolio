@@ -1,7 +1,7 @@
-import Fxw1      from '../assets/imgs/projects/fxw/01-fxw.png';
-import Fxw2      from '../assets/imgs/projects/fxw/02-fxw.png';
-import Fxw3      from '../assets/imgs/projects/fxw/03-fxw.png';
-import Fxw4      from '../assets/imgs/projects/fxw/04-fxw.png';
+import Wapi1      from '../assets/imgs/projects/wapifirma/01-wapi.png';
+import Wapi2      from '../assets/imgs/projects/wapifirma/02-wapi.png';
+import Wapi3      from '../assets/imgs/projects/wapifirma/03-wapi.png';
+import Wapi4      from '../assets/imgs/projects/wapifirma/04-wapi.png';
 import Levrone1  from '../assets/imgs/projects/levrone/01-levrone.png';
 import Levrone2  from '../assets/imgs/projects/levrone/02-levrone.png';
 import Levrone3  from '../assets/imgs/projects/levrone/03-levrone.png';
@@ -35,15 +35,15 @@ import NextIcon from '../assets/imgs/next-icon.png';
 
 const projects = [
     {
-      images: [Fxw1, Fxw2, Fxw3, Fxw4],
-      title: "FxW",
+      images: [Wapi1, Wapi2, Wapi3, Wapi4],
+      title: "WapiFirma",
       "description": {
-      "en": "Front-end design for the FxW company in which you can create a document, view it in requests, sign it, view your profile, buy plans, register through Google, among others.",
-      "es": "Diseño Front-end para la empresa FxW en el cual se puede crear un documento, visualizarlo en solicitudes, firmarlo, ver tu perfil, comprar planes, registrarse mediante google, entre otros."
+      "en": "Front-end design for the WapiFirma company in which you can create a document, view it in requests, sign it, view your profile, buy plans, register through Google, among others.",
+      "es": "Diseño Front-end para la empresa WapiFirma en el cual se puede crear un documento, visualizarlo en solicitudes, firmarlo, ver tu perfil, comprar planes, registrarse mediante google, entre otros."
       },
       icons: ["FaHtml5", "FaJs", "FaVuejs"],
-      website: 'https://fx-w.vercel.app/',
-      github: 'https://github.com/matiasmontonee/FxW',
+      website: 'https://app.wapifirma.com/',
+      github: 'https://github.com/matiasmontonee/WapiFirma',
       tailwindIcon: TailwindIcon
     },
     {
