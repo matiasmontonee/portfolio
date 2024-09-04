@@ -3,7 +3,6 @@ import { FaArrowRight } from 'react-icons/fa';
 import { useLanguage } from '../context/Language'; 
 import db from "../firebase.js";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
-import Modal from '../components/Modal.jsx';
 
 const ContactView = () => {
   const [name, setName] = useState('');
@@ -118,8 +117,6 @@ const ContactView = () => {
           <button type="submit" className="submit-hover border rounded-full text-white font-bold py-2 text-center inline-block w-28 contact">{isEnglish ? 'Submit' : 'Enviar'}</button>
         </div>
       </form>
-      
-      {showModal && <Modal onClose={() => setShowModal(false)} isSuccess={isSuccess} />}
     </section>
   );
 };
