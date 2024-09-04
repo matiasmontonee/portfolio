@@ -22,11 +22,8 @@ const AboutView = () => {
   }, [inView]);
 
   return (
-    <section id="about" className="bg-white text-black flex flex-col lg:flex-row-reverse lg:h-screen">
-      <div ref={ref} className={`lg:order-1 order-2 w-full lg:w-1/2 lg:pb-0 pb-8 flex justify-center items-center profile-image-container ${isVisible ? 'visible' : ''}`}>
-        <img src={ProfileImage} alt="Profile" className="h-96 w-96 pulse" />
-      </div>
-      <div className={`lg:order-2 order-1 w-full lg:w-1/2 p-8 flex justify-center items-center about-container ${isVisible ? 'visible' : ''}`}>
+    <section id="about" className="bg-white text-black flex flex-col lg:flex-row lg:h-screen">
+      <div className={`w-full lg:w-1/2 p-8 flex justify-center items-center about-container ${isVisible ? 'visible' : ''}`}>
         <div>
           <div className="flex items-center">
             <FaArrowRight size={36} className="mr-2 arrow-right lg:ml-12" />
@@ -41,6 +38,9 @@ const AboutView = () => {
             </a>
           </div>
         </div>
+      </div>
+      <div ref={ref} className={`w-full lg:w-1/2 lg:pb-0 pb-8 flex justify-center items-center profile-image-container ${isVisible ? 'visible' : ''}`}>
+        <img src={ProfileImage} alt="Profile" className="h-96 w-96 pulse" />
       </div>
     </section>
   );
