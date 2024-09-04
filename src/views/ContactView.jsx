@@ -34,7 +34,7 @@ const ContactView = () => {
           <FaArrowRight size={36} className="mr-2 arrow-right" />
           <h2 className="text-3xl sm:text-5xl font-bold text-white">{isEnglish ? 'Contact' : 'Contacto'}</h2>
         </div>
-        <p className="text-md sm:text-xl text-gray-500 mt-4 flex items-center">
+        <p className="text-md sm:text-xl text-white mt-4 flex items-center">
           {isEnglish ? 'Contact me to start your project!' : '¡Contactame para comenzar tu proyecto!'}<FaRocket className='text-blue-500 ml-2'/>
         </p>
 
