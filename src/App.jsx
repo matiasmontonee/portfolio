@@ -4,7 +4,7 @@ import { LanguageProvider } from './context/Language';
 import Cursor from './components/Cursor';
 import Navbar from './components/Navbar';
 import HomeView from './views/HomeView';
-import AboutMeView from './views/AboutMeView';
+import AboutView from './views/AboutView';
 import ProjectsView from './views/ProjectsView';
 import SkillsView from './views/SkillsView';
 import ContactView from './views/ContactView';
@@ -17,7 +17,7 @@ function App() {
         <Cursor />
         <Navbar />
         <HomeView />
-        <AboutMeView />
+        <AboutView />
         <ProjectsView />
         <SkillsView />
         <ContactView />
