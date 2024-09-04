@@ -386,18 +386,6 @@ p, span, a, button {
 
 /* CONTACT */
 
-.submit-hover:hover {
-  transition: 0.5s ease;
-  background-color: #3182ce; 
-  border-color: #3182ce; 
-}
-
-#name::placeholder,
-#email::placeholder,
-#comment::placeholder {
-  color: rgb(110, 110, 110); 
-}
-
 /* ANYMATIONS  */
 
 .contact {
