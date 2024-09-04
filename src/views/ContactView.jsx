@@ -1,71 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { FaArrowRight } from 'react-icons/fa';
-import { useLanguage } from '../context/Language'; 
-import db from "../firebase.js";
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { FaArrowRight, FaEnvelope, FaLinkedin, FaRocket, FaWhatsapp } from 'react-icons/fa';
+import { useInView } from 'react-intersection-observer';
+import { useLanguage } from '../context/Language';
+import Img from '../assets/imgs/programador.png'
 
 const ContactView = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [comment, setComment] = useState('');
-  const [nameError, setNameError] = useState('');
-  const [emailError, setEmailError] = useState('');
-  const [commentError, setCommentError] = useState('');
-  const [showModal, setShowModal] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
   const { isEnglish } = useLanguage();
+  const [isVisible, setIsVisible] = useState(false);
+  const { ref, inView } = useInView({
+    threshold: 0.5, 
+  });
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    let hasError = false;
-
-    if (name.trim() === '') {
-      setNameError(isEnglish ? 'Name is required' : 'Ingrese su nombre');
-      hasError = true;
-    } else {
-      setNameError('');
+  useEffect(() => {
+    if (inView) {
+      setIsVisible(true);
     }
-
-    if (email.trim() === '') {
-      setEmailError(isEnglish ? 'Email is required' : 'Ingrese su correo');
-      hasError = true;
-    } else if (!validateEmail(email)) {
-      setEmailError(isEnglish ? 'Please enter a valid email address' : 'Por favor, ingrese una dirección de correo electrónico válida');
-      hasError = true;
-    } else {
-      setEmailError('');
-    }
-
-    if (comment.trim() === '') {
-      setCommentError(isEnglish ? 'Comment is required' : 'Ingrese su comentario');
-      hasError = true;
-    } else {
-      setCommentError('');
-    }
-
-    if (hasError) return;
-
-    try {
-      await addDoc(collection(db, "contact"), {
-        name, email, comment, timestamp: serverTimestamp()
-      });
-      setIsSuccess(true);
-      setName('');
-      setEmail('');
-      setComment('');
-    } catch (error) {
-      setIsSuccess(false);
-      console.error('Error:', error);
-    } finally {
-      setShowModal(true);
-    }
-  };
-
-  const validateEmail = (email) => {
-    const re = /\S+@\S+\.\S+/;
-    return re.test(email);
-  };
+  }, [inView]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -90,33 +40,33 @@ const ContactView = () => {
 
   return (
     <section id="contact" className="lg:p-20 p-8 bg-black">
-      <div className="flex items-center accordion">
-        <FaArrowRight size={36} className="mr-2 arrow-right" />
-        <h2 className="text-3xl sm:text-5xl font-bold text-white">{isEnglish ? 'Contact' : 'Contacto'}</h2>
+      <div className="flex flex-col lg:flex-row items-center">
+        <div ref={ref} className={`lg:w-1/2 about-container ${isVisible ? 'visible' : ''}`}>
+          <div className="flex items-center">
+            <FaArrowRight size={36} className="mr-2 arrow-right" />
+            <h2 className="text-3xl sm:text-5xl font-bold text-white">{isEnglish ? 'Contact' : 'Contacto'}</h2>
+          </div>
+          <p className="text-md sm:text-xl text-gray-500 mt-4 flex items-center">
+            {isEnglish ? 'Contact me to start your project!' : '¡Contactame para comenzar tu proyecto!'}<FaRocket className='text-blue-500 ml-2'/>
+          </p>
+
+          <div className='btn-container mt-8'>
+            <a href="mailto:matiasmontonedev@gmail.com" target="_blank" rel="noopener noreferrer" className="border border-white text-white rounded-full font-bold py-2 text-center inline-block w-full lg:w-3/4">
+              <FaEnvelope className="inline-block mr-2 mb-1 lg:mb-0.5" />matiasmontonedev@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/matiasmontone/" target="_blank" rel="noopener noreferrer" className="border border-white text-white rounded-full font-bold py-2 text-center inline-block w-full lg:w-3/4 my-6">
+              <FaLinkedin className="inline-block mr-2 mb-1 lg:mb-0.5" />Matías Montone
+            </a>
+            <a href="https://wa.me/+5491133501860" target="_blank" rel="noopener noreferrer" className="border border-white text-white rounded-full font-bold py-2 text-center inline-block w-full lg:w-3/4">
+              <FaWhatsapp className="inline-block mr-2 mb-1 lg:mb-0.5" />+54 9 1133501860
+            </a>
+          </div>
+        </div>
+
+        <div ref={ref} className={`lg:w-1/2 flex justify-center lg:mt-0 mt-8 profile-image-container ${isVisible ? 'visible' : ''}`}>
+          <img src={Img} alt="Banner programador" className="h-64 w-96 lg:w-128" />
+        </div>
       </div>
-      <p className="text-md sm:text-xl text-gray-400 mt-2 flex items-center accordion">
-        {isEnglish ? 'Send me a message!' : '¡Envíame un mensaje!'}
-      </p>
-      <form className="mt-8 max-w-2xl mx-auto" onSubmit={handleSubmit} noValidate>
-        <div className="mb-4">
-          <label htmlFor="name" className="block text-white text-md sm:text-lg font-bold mb-2 cursor-none contact">{isEnglish ? 'Name' : 'Nombre'}</label>
-          <input type="text" id="name" name="name" value={name} onChange={(e) => setName(e.target.value)} placeholder={isEnglish ? 'Enter your name' : 'Ingrese su nombre'} className="appearance-none bg-gray-200 border border-gray-200 rounded-lg w-full p-2 focus:outline-none focus:border-blue-500 cursor-none contact" style={{ borderWidth: '3px' }} />
-          {nameError && <p className="text-red-500 mt-2">{nameError}</p>}
-        </div>
-        <div className="mb-4">
-          <label htmlFor="email" className="block text-white text-md sm:text-lg font-bold mb-2 cursor-none contact">{isEnglish ? 'Email' : 'Correo'}</label>
-          <input type="email" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder={isEnglish ? 'Enter your email' : 'Ingrese su correo'} className="appearance-none bg-gray-200 border border-gray-200 rounded-lg w-full p-2 focus:outline-none focus:border-blue-500 cursor-none contact" style={{ borderWidth: '3px' }} />
-          {emailError && <p className="text-red-500 mt-2">{emailError}</p>}
-        </div>
-        <div className="mb-4">
-          <label htmlFor="comment" className="block text-white text-md sm:text-lg font-bold mb-2 cursor-none contact">{isEnglish ? 'Comment' : 'Comentario'}</label>
-          <textarea id="comment" name="comment" value={comment} onChange={(e) => setComment(e.target.value)} placeholder={isEnglish ? 'I wanted to contact you to...' : 'Quería contactarte para...'} className="appearance-none bg-gray-200 border border-gray-200 rounded-lg w-full p-6 pt-1 pl-2 focus:outline-none focus:border-blue-500 cursor-none contact" style={{ borderWidth: '3px' }}></textarea>
-          {commentError && <p className="text-red-500 mt-1">{commentError}</p>}
-        </div>
-        <div className="flex items-center justify-end">
-          <button type="submit" className="submit-hover border rounded-full text-white font-bold py-2 text-center inline-block w-28 contact">{isEnglish ? 'Submit' : 'Enviar'}</button>
-        </div>
-      </form>
     </section>
   );
 };
