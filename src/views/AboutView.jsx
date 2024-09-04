@@ -1,14 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { FaArrowRight, FaFilePdf } from 'react-icons/fa';
-import { useInView } from 'react-intersection-observer';
 import { useLanguage } from '../context/Language'; 
 import ProfileImage from '../assets/imgs/profile.png'; 
 
 const AboutView = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const { ref, inView } = useInView({
-    threshold: 0.5, 
-  });
   const { isEnglish } = useLanguage();
   const [cvFile] = useState({
     en: `${process.env.PUBLIC_URL}/EN-MATIAS-MONTONE.pdf`,
@@ -16,14 +11,29 @@ const AboutView = () => {
   });
 
   useEffect(() => {
-    if (inView) {
-      setIsVisible(true);
-    }
-  }, [inView]);
+    const handleScroll = () => {
+      const skillElements = document.querySelectorAll('.about');
+      skillElements.forEach((skill) => {
+        const rect = skill.getBoundingClientRect();
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+        const visiblePercent = (windowHeight - rect.top) / windowHeight;
+        if (visiblePercent >= 0.3) {
+          skill.classList.add('in-viewport');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <section id="about" className="bg-white text-black flex flex-col lg:flex-row lg:h-screen">
-      <div className={`w-full lg:w-1/2 p-8 flex justify-center items-center about-container ${isVisible ? 'visible' : ''}`}>
+      <div className='w-full lg:w-1/2 p-8 flex justify-center items-center about-container about'>
         <div>
           <div className="flex items-center">
             <FaArrowRight size={36} className="mr-2 arrow-right lg:ml-12" />
@@ -39,7 +49,8 @@ const AboutView = () => {
           </div>
         </div>
       </div>
-      <div ref={ref} className={`w-full lg:w-1/2 lg:pb-0 pb-8 flex justify-center items-center profile-image-container ${isVisible ? 'visible' : ''}`}>
+
+      <div className='w-full lg:w-1/2 lg:pb-0 pb-8 flex justify-center items-center profile-image-container about'>
         <img src={ProfileImage} alt="Profile" className="h-96 w-96 pulse" />
       </div>
     </section>
