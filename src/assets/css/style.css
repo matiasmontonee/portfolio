@@ -230,20 +230,10 @@ p, span, a, button {
   transition: opacity 0.5s ease, transform 1s ease;
 }
 
-.profile-image-container.visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-
 .about-container {
   opacity: 0;
   transform: translateX(100px);
   transition: opacity 0.5s ease, transform 1s ease; 
-}
-
-.about-container.visible {
-  opacity: 1;
-  transform: translateX(0);
 }
 
 /* PROJECTS */
