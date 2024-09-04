@@ -39,8 +39,7 @@ const ContactView = () => {
   }, []);
 
   return (
-    <section id="contact" className="lg:p-20 p-8 bg-black">
-      <div className="flex flex-col lg:flex-row items-center">
+    <section id="contact" className="bg-black flex flex-col lg:flex-row lg:p-20 p-8">
         <div ref={ref} className={`lg:w-1/2 about-container ${isVisible ? 'visible' : ''}`}>
           <div className="flex items-center">
             <FaArrowRight size={36} className="mr-2 arrow-right" />
@@ -63,10 +62,9 @@ const ContactView = () => {
           </div>
         </div>
 
-        <div ref={ref} className={`lg:w-1/2 flex justify-center lg:mt-0 mt-8 profile-image-container ${isVisible ? 'visible' : ''}`}>
+        <div ref={ref} className={`lg:w-1/2 flex justify-center items-center mt-8 profile-image-container ${isVisible ? 'visible' : ''}`}>
           <img src={Img} alt="Banner programador" className="h-64 w-96 lg:w-128" />
         </div>
-      </div>
     </section>
   );
 };
