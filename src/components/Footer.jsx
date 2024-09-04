@@ -36,19 +36,19 @@ const Footer = () => {
         <hr className="w-full border-b-1 border-black"/>
 
         <div className="flex justify-between w-full mt-5 mb-2">
-        <div className="btn-container">
-          <a href={cvFile[isEnglish ? 'en' : 'es']} target="_blank" rel='noreferrer' className="border border-black rounded-full font-bold inline-block p-0.5 pl-2 pr-2">
-            <FaFilePdf className='inline-block mr-2 mb-1'/>{isEnglish ? 'Download CV' : 'Descargar CV'}
-          </a>
-        </div>
+          <div className="btn-container">
+            <a href={cvFile[isEnglish ? 'en' : 'es']} target="_blank" rel='noreferrer' className="border border-black rounded-full font-bold inline-block p-0.5 pl-2 pr-2">
+              <FaFilePdf className='inline-block mr-2 mb-1'/>{isEnglish ? 'Download CV' : 'Descargar CV'}
+            </a>
+          </div>
 
-        <div className="flex icon-container2">
-          <a href="https://wa.me/+5491133501860" target="_blank" rel="noopener noreferrer" className="mr-2 text-3xl"><FaWhatsapp /></a>
-          <a href="https://github.com/matiasmontonee" target="_blank" rel="noopener noreferrer" className="mr-2 text-3xl"><FaGithub /></a>
-          <a href="https://www.linkedin.com/in/matiasmontone/" target="_blank" rel="noopener noreferrer" className="mr-2 text-3xl"><FaLinkedin /></a>
-          <a href="mailto:matiasmontonedev@gmail.com" target="_blank" rel="noopener noreferrer" className="text-3xl"><FaEnvelope /></a>
+          <div className="flex icon-container2">
+            <a href="https://wa.me/+5491133501860" target="_blank" rel="noopener noreferrer" className="mr-2 text-3xl"><FaWhatsapp /></a>
+            <a href="https://github.com/matiasmontonee" target="_blank" rel="noopener noreferrer" className="mr-2 text-3xl"><FaGithub /></a>
+            <a href="https://www.linkedin.com/in/matiasmontone/" target="_blank" rel="noopener noreferrer" className="mr-2 text-3xl"><FaLinkedin /></a>
+            <a href="mailto:matiasmontonedev@gmail.com" target="_blank" rel="noopener noreferrer" className="text-3xl"><FaEnvelope /></a>
+          </div>
         </div>
-      </div>
       </div>
 
     </footer>
