@@ -23,10 +23,10 @@ const Footer = () => {
         <div className={`text-2xl font-bold ${isEnglish ? 'mr-0' : 'mr-7'}`}>Matías Montone &copy; 2024</div>
 
         <div className="flex icon-container2">
-          <a href="https://wa.me/+5491133501860" target="_blank" rel="noopener noreferrer" className="mr-4 text-4xl"><FaWhatsapp /></a>
-          <a href="https://github.com/matiasmontonee" target="_blank" rel="noopener noreferrer" className="mr-4 text-4xl"><FaGithub /></a>
-          <a href="https://www.linkedin.com/in/matiasmontone/" target="_blank" rel="noopener noreferrer" className="mr-4 text-4xl"><FaLinkedin /></a>
-          <a href="mailto:matiasmontonedev@gmail.com" target="_blank" rel="noopener noreferrer" className="text-4xl"><FaEnvelope /></a>
+          <a href="https://wa.me/+5491133501860" target="_blank" rel="noopener noreferrer" className="mr-4 text-4xl" aria-label='WhatsApp de Matías Montone'><FaWhatsapp /></a>
+          <a href="https://github.com/matiasmontonee" target="_blank" rel="noopener noreferrer" className="mr-4 text-4xl" aria-label='Github de Matías Montone'><FaGithub /></a>
+          <a href="https://www.linkedin.com/in/matiasmontone/" target="_blank" rel="noopener noreferrer" className="mr-4 text-4xl" aria-label='LinkedIn de Matías Montone'><FaLinkedin /></a>
+          <a href="mailto:matiasmontonedev@gmail.com" target="_blank" rel="noopener noreferrer" className="text-4xl" aria-label='Email de Matías Montone'><FaEnvelope /></a>
         </div>
       </div>
 
