@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { FaTimes, FaHome, FaUser, FaClipboardList, FaTools, FaPhoneAlt, FaBars } from 'react-icons/fa';
+import { FaTimes, FaUser, FaClipboardList, FaTools, FaPhoneAlt, FaBars } from 'react-icons/fa';
 import { useLanguage } from '../context/Language';
 import Logo from '../assets/imgs/logo.png';
 import Arg from '../assets/imgs/arg.png';
@@ -54,7 +54,7 @@ const Navbar = () => {
           </>
         )}
       </div>
-      <button onClick={toggleMenu} className="lg:hidden text-white z-50 nav-link">
+      <button onClick={toggleMenu} className="lg:hidden text-white z-50 nav-link" aria-label='Menú de navegación'>
         <FaBars className='w-8 h-8' />
       </button>
       {isMenuOpen && (
@@ -66,9 +66,6 @@ const Navbar = () => {
             <p className='text-lg text-white p-4 pt-6 pb-6 pl-0'>{isEnglish ? ('Menu') : ('Menú')}</p>
             <span className='text-white text-lg mt-1 cursor-pointer logo' onClick={toggleMenu}><FaTimes /></span>
           </div>
-          <a href="# " className="nav-link text-lg text-white border-b border-white p-6 pl-0 w-full" onClick={toggleMenu}>
-            <FaHome className="inline-block mr-2 mb-1.5" />{isEnglish ? ('Home') : ('Inicio')}
-          </a>
           <a href="#about" className="nav-link text-lg text-white border-b border-white p-6 pl-0 w-full" onClick={toggleMenu}>
             <FaUser className="inline-block mr-2 mb-1.5" />{isEnglish ? ('About me') : ('Sobre Mí')}
           </a>
