@@ -42,13 +42,13 @@ const HomeView = () => {
               {isEnglish ? 'About me' : 'Sobre mí'}
               <FaArrowUp size={26} className="arrow-animation" />
             </a>
-            <a href="https://github.com/matiasmontonee" target="_blank" rel="noopener noreferrer" className="mr-4 mt-2">
+            <a href="https://github.com/matiasmontonee" target="_blank" rel="noopener noreferrer" className="mr-4 mt-2" aria-label='GitHub de Matías Montone'>
               <FaGithub size={26} />
             </a>
-            <a href="https://www.linkedin.com/in/matiasmontone/" target="_blank" rel="noopener noreferrer" className="mr-4 mt-2">
+            <a href="https://www.linkedin.com/in/matiasmontone/" target="_blank" rel="noopener noreferrer" className="mr-4 mt-2" aria-label='LinkedIn de Matías Montone'>
               <FaLinkedin size={26} />
             </a>
-            <a href="mailto:matiasmontonedev@gmail.com" target="_blank" rel="noopener noreferrer" className="mt-2">
+            <a href="mailto:matiasmontonedev@gmail.com" target="_blank" rel="noopener noreferrer" className="mt-2" aria-label='Email de Matías Montone'>
               <FaEnvelope size={26} />
             </a>
           </div>
