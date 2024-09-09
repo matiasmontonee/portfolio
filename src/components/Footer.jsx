@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <footer className='p-2 pl-8 pr-8 lg:p-6 lg:pl-20 lg:pr-20'>
 
-      {/* PC */}
+      {/* DESKTOP */}
       <div className='hidden lg:flex justify-between'>
         <div className='btn-container'>
           <a href={cvFile[isEnglish ? 'en' : 'es']} target="_blank" rel='noreferrer' className="border border-black rounded-full font-bold inline-block p-1 pl-3 pr-3 mr-1">
@@ -43,10 +43,10 @@ const Footer = () => {
           </div>
 
           <div className="flex icon-container2">
-            <a href="https://wa.me/+5491133501860" target="_blank" rel="noopener noreferrer" className="mr-2 text-3xl"><FaWhatsapp /></a>
-            <a href="https://github.com/matiasmontonee" target="_blank" rel="noopener noreferrer" className="mr-2 text-3xl"><FaGithub /></a>
-            <a href="https://www.linkedin.com/in/matiasmontone/" target="_blank" rel="noopener noreferrer" className="mr-2 text-3xl"><FaLinkedin /></a>
-            <a href="mailto:matiasmontonedev@gmail.com" target="_blank" rel="noopener noreferrer" className="text-3xl"><FaEnvelope /></a>
+            <a href="https://wa.me/+5491133501860" target="_blank" rel="noopener noreferrer" className="mr-2 text-3xl" aria-label='WhatsApp de Matías Montone'><FaWhatsapp /></a>
+            <a href="https://github.com/matiasmontonee" target="_blank" rel="noopener noreferrer" className="mr-2 text-3xl" aria-label='Github de Matías Montone'><FaGithub /></a>
+            <a href="https://www.linkedin.com/in/matiasmontone/" target="_blank" rel="noopener noreferrer" className="mr-2 text-3xl" aria-label='LinkedIn de Matías Montone'><FaLinkedin /></a>
+            <a href="mailto:matiasmontonedev@gmail.com" target="_blank" rel="noopener noreferrer" className="text-3xl" aria-label='Email de Matías Montone'><FaEnvelope /></a>
           </div>
         </div>
       </div>
