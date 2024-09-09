@@ -30,7 +30,7 @@ const HomeView = () => {
         <div>
           <div className="relative">
             <h1 className="text-4xl sm:text-5xl font-bold matias">Matías Montone</h1>
-            <div className="absolute hello rounded animate-bounce">
+            <div className="absolute hello rounded animate-bounce text-black font-semibold">
               {isEnglish ? 'Welcome!' : '¡Bienvenido!'}
             </div>
           </div>
