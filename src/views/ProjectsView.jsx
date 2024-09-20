@@ -103,11 +103,12 @@ const ProjectsView = () => {
               <div className="flex justify-between">
                 <div className="flex items-end text-3xl sm:text-4xl">
                   {getIcons(project.icons)}
+                  {project.typescriptIcon && <img src={project.typescriptIcon} alt="Typescript Icon" style={{ objectFit: 'contain', marginLeft: '4px' }} className='tailwind-img' />}
                   {project.tailwindIcon && <img src={project.tailwindIcon} alt="Tailwind Icon" style={{ objectFit: 'contain', marginLeft: '4px' }} className='tailwind-img' />}
                 </div>
                 <div className="flex items-end text-3xl sm:text-4xl">
                   <a href={project.github} className='github-hover' target="_blank" rel="noreferrer" aria-label='Repositorio en GitHub de Matías Montone'><FaGithub /></a>
-                  {index !== 2 && index !== 3 && (
+                  {index !== 3 && index !== 4 && (
                     <a href={project.website} className='web-hover ml-2 sm:ml-4' target="_blank" rel="noreferrer" aria-label='Sitio web de Matías Montone'><FaExternalLinkAlt /></a>
                   )}
                 </div>
