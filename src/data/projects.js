@@ -6,6 +6,10 @@ import Levrone1  from '../assets/imgs/projects/levrone/01-levrone.png';
 import Levrone2  from '../assets/imgs/projects/levrone/02-levrone.png';
 import Levrone3  from '../assets/imgs/projects/levrone/03-levrone.png';
 import Levrone4  from '../assets/imgs/projects/levrone/04-levrone.png';
+import Safenest1  from '../assets/imgs/projects/safenest/01-safenest.png';
+import Safenest2  from '../assets/imgs/projects/safenest/02-safenest.png';
+import Safenest3  from '../assets/imgs/projects/safenest/03-safenest.png';
+import Safenest4  from '../assets/imgs/projects/safenest/04-safenest.png';
 import Tenis1  from '../assets/imgs/projects/tenis-shop/01-tenis.png';
 import Tenis2  from '../assets/imgs/projects/tenis-shop/02-tenis.png';
 import Tenis3  from '../assets/imgs/projects/tenis-shop/03-tenis.png';
@@ -31,6 +35,7 @@ import Pokeapi1  from '../assets/imgs/projects/poke-api/01-poke-api.png';
 import Pokeapi2  from '../assets/imgs/projects/poke-api/02-poke-api.png';
 import Pokeapi3  from '../assets/imgs/projects/poke-api/03-poke-api.png';
 import TailwindIcon from '../assets/imgs/tailwind-icon.png';
+import TypescriptIcon from '../assets/imgs/typescript-icon.png';
 import NextIcon from '../assets/imgs/next-icon.png';
 
 const projects = [
@@ -56,6 +61,19 @@ const projects = [
       icons: ["FaHtml5", "FaCss3", "FaJs", "FaReact"],
       website: 'https://levrone.vercel.app/',
       github: 'https://github.com/matiasmontonee/levrone',
+      tailwindIcon: TailwindIcon
+    },
+    {
+      images: [Safenest1, Safenest2, Safenest3, Safenest4],
+      title: "Safenest",
+      "description": {
+        "en": "Random password generator and validator. It features login, light/dark mode, password history and user profile.",
+        "es": "Generador y validador de contraseñas aleatorias. Cuenta con inicio de sesión, modo claro/oscuro, historial de contraseñas y perfil de usuario."
+      },
+      icons: ["FaHtml5", "FaCss3", "FaReact"],
+      website: 'https://safenest-password-generator.vercel.app/',
+      github: 'https://github.com/matiasmontonee/password-generator',
+      typescriptIcon: TypescriptIcon,
       tailwindIcon: TailwindIcon
     },
     {
@@ -138,4 +156,4 @@ const projects = [
     }
   ];
   
-export default projects;
+export default projects;  
