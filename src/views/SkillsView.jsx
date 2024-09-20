@@ -3,9 +3,9 @@ import { FaArrowRight, FaDesktop, FaDatabase, FaPen } from 'react-icons/fa';
 import { useLanguage } from '../context/Language'; 
 import HtmlIcon from '../assets/imgs/skills/html5.png';
 import CssIcon from '../assets/imgs/skills/css3.png';
-import BootstrapIcon from '../assets/imgs/skills/bootstrap.png';
 import TailwindIcon from '../assets/imgs/skills/tailwind.png';
 import JsIcon from '../assets/imgs/skills/javascript.png';
+import TsIcon from '../assets/imgs/skills/typescript.png';
 import ReactIcon from '../assets/imgs/skills/react.png';
 import VueIcon from '../assets/imgs/skills/vue.png';
 import NodeIcon from '../assets/imgs/skills/node.png';
@@ -25,9 +25,9 @@ import WordpressIcon from '../assets/imgs/skills/wordpress.png';
 const skillsData = [
   { name: 'HTML5', icon: HtmlIcon },
   { name: 'CSS3', icon: CssIcon },
-  { name: 'Bootstrap', icon: BootstrapIcon },
   { name: 'Tailwind', icon: TailwindIcon },
   { name: 'JavaScript', icon: JsIcon },
+  { name: 'TypeScript', icon: TsIcon },
   { name: 'React', icon: ReactIcon },
   { name: 'Vue', icon: VueIcon },
   { name: 'Node.js', icon: NodeIcon },
