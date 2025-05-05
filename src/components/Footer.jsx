@@ -20,7 +20,7 @@ const Footer = () => {
           </a>
         </div>
 
-        <div className={`text-2xl font-bold ${isEnglish ? 'mr-0' : 'mr-7'}`}>Matías Montone &copy; 2024</div>
+        <div className={`text-2xl font-bold ${isEnglish ? 'mr-0' : 'mr-7'}`}>Matías Montone &copy; 2025</div>
 
         <div className="flex icon-container2">
           <a href="https://wa.me/+5491133501860" target="_blank" rel="noopener noreferrer" className="mr-4 text-4xl" aria-label='WhatsApp de Matías Montone'><FaWhatsapp /></a>
@@ -32,7 +32,7 @@ const Footer = () => {
 
       {/* MOBILE */}
       <div className='flex lg:hidden flex-col items-center'>
-        <div className="text-xl md:text-2xl font-bold mb-3.5">Matías Montone &copy; 2024</div>
+        <div className="text-xl md:text-2xl font-bold mb-3.5">Matías Montone &copy; 2025</div>
         <hr className="w-full border-b-1 border-black"/>
 
         <div className="flex justify-between w-full mt-5 mb-2">
