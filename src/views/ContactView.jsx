@@ -46,7 +46,7 @@ const ContactView = () => {
             <FaLinkedin className="inline-block mr-2 mb-1 lg:mb-0.5" />Matías Montone
           </a>
           <a href="https://wa.me/+5491133501860" target="_blank" rel="noopener noreferrer" className="border border-white text-white rounded-full font-bold py-2 text-center inline-block w-full lg:w-3/4">
-            <FaWhatsapp className="inline-block mr-2 mb-1 lg:mb-0.5" />+54 9 1133501860
+            <FaWhatsapp className="inline-block mr-2 mb-1 lg:mb-0.5" />+54 9 11 3350-1860
           </a>
         </div>
       </div>

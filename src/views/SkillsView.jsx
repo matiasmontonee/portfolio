@@ -19,8 +19,9 @@ import GitIcon from '../assets/imgs/skills/git.png';
 import GithubIcon from '../assets/imgs/skills/github.png';
 import InsomniaIcon from '../assets/imgs/skills/insomnia.png';
 import PsIcon from '../assets/imgs/skills/photoshop.png';
-import IllIcon from '../assets/imgs/skills/illustrator.png';
-import WordpressIcon from '../assets/imgs/skills/wordpress.png';
+import WhapifyIcon from '../assets/imgs/skills/whapify.png';
+import DopplerIcon from '../assets/imgs/skills/doppler.jpeg';
+import AsanaIcon from '../assets/imgs/skills/asana.png';
 
 const skillsData = [
   { name: 'HTML5', icon: HtmlIcon },
@@ -41,8 +42,9 @@ const skillsData = [
   { name: 'GitHub', icon: GithubIcon },
   { name: 'Insomnia', icon: InsomniaIcon },
   { name: 'Photoshop', icon: PsIcon },
-  { name: 'Illustrator', icon: IllIcon },
-  { name: 'WordPress', icon: WordpressIcon }
+  { name: 'Whapify', icon: WhapifyIcon },
+  { name: 'Doppler', icon: DopplerIcon },
+  { name: 'Asana', icon: AsanaIcon }
 ];
 
 const SkillsView = () => {
