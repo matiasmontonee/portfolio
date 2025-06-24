@@ -6,37 +6,27 @@ import Levrone1  from '../assets/imgs/projects/levrone/01-levrone.png';
 import Levrone2  from '../assets/imgs/projects/levrone/02-levrone.png';
 import Levrone3  from '../assets/imgs/projects/levrone/03-levrone.png';
 import Levrone4  from '../assets/imgs/projects/levrone/04-levrone.png';
+import Inventario1  from '../assets/imgs/projects/inventario/01-inventario.png';
+import Inventario2  from '../assets/imgs/projects/inventario/02-inventario.png';
+import Inventario3  from '../assets/imgs/projects/inventario/03-inventario.png';
+import Inventario4  from '../assets/imgs/projects/inventario/04-inventario.png';
+import Blog1  from '../assets/imgs/projects/blog/01-blog.png';
+import Blog2  from '../assets/imgs/projects/blog/02-blog.png';
+import Blog3  from '../assets/imgs/projects/blog/03-blog.png';
+import Blog4  from '../assets/imgs/projects/blog/04-blog.png';
 import Safenest1  from '../assets/imgs/projects/safenest/01-safenest.png';
 import Safenest2  from '../assets/imgs/projects/safenest/02-safenest.png';
 import Safenest3  from '../assets/imgs/projects/safenest/03-safenest.png';
 import Safenest4  from '../assets/imgs/projects/safenest/04-safenest.png';
-import Tenis1  from '../assets/imgs/projects/tenis-shop/01-tenis.png';
-import Tenis2  from '../assets/imgs/projects/tenis-shop/02-tenis.png';
-import Tenis3  from '../assets/imgs/projects/tenis-shop/03-tenis.png';
-import Tenis4  from '../assets/imgs/projects/tenis-shop/04-tenis.png';
-import Music1  from '../assets/imgs/projects/music-shop/01-music.png';
-import Music2  from '../assets/imgs/projects/music-shop/02-music.png';
-import Music3  from '../assets/imgs/projects/music-shop/03-music.png';
-import Music4  from '../assets/imgs/projects/music-shop/04-music.png';
-import Sas1      from '../assets/imgs/projects/security-and-system/01-sas.png';
-import Sas2      from '../assets/imgs/projects/security-and-system/02-sas.png';
-import Sas3      from '../assets/imgs/projects/security-and-system/03-sas.png';
 import Five1     from '../assets/imgs/projects/five-stars/01-five-stars.png';
 import Five2     from '../assets/imgs/projects/five-stars/02-five-stars.png';
 import Five3     from '../assets/imgs/projects/five-stars/03-five-stars.png';
 import Five4     from '../assets/imgs/projects/five-stars/04-five-stars.png';
-import Feather1  from '../assets/imgs/projects/feather/01-feather.png';
-import Feather2  from '../assets/imgs/projects/feather/02-feather.png';
-import Feather3  from '../assets/imgs/projects/feather/03-feather.png';
-import Feather4  from '../assets/imgs/projects/feather/04-feather.png';
-import Todo1     from '../assets/imgs/projects/todo-app/01-todo-app.png';
-import Todo2     from '../assets/imgs/projects/todo-app/02-todo-app.png';
 import Pokeapi1  from '../assets/imgs/projects/poke-api/01-poke-api.png';
 import Pokeapi2  from '../assets/imgs/projects/poke-api/02-poke-api.png';
 import Pokeapi3  from '../assets/imgs/projects/poke-api/03-poke-api.png';
 import TailwindIcon from '../assets/imgs/tailwind-icon.png';
 import TypescriptIcon from '../assets/imgs/typescript-icon.png';
-import NextIcon from '../assets/imgs/next-icon.png';
 
 const projects = [
     {
@@ -64,6 +54,26 @@ const projects = [
       tailwindIcon: TailwindIcon
     },
     {
+      images: [Inventario1, Inventario2, Inventario3, Inventario4],
+      title: "Sistema Inventario",
+      "description": {
+        "en": "Web application for managing products, suppliers, and categories, allowing individual and bulk create, read, update, and delete operations. It includes Purchasing and Sales modules with real-time stock control, PDF/Excel report generation, and list pagination, all secured by role-based access permissions.",
+        "es": "Aplicación web para gestionar productos, proveedores y categorías, permitiendo altas, bajas y modificaciones tanto individuales como masivas. Incluye módulos de Compras y Ventas con control de stock en tiempo real, generación de PDF/Excel de informes y paginación de listas, todo con permisos de acceso según roles."
+      },
+      icons: ["FaPhp", "FaBootstrap", "FaJs"],
+      github: 'https://github.com/matiasmontonee/sistema-inventario'
+    },
+    {
+      images: [Blog1, Blog2, Blog3, Blog4],
+      title: "Blog",
+      "description": {
+        "en": "Full-stack blog project that supports registration and login with JWT. The frontend is built with Vue 3 and Vite + Bootstrap, and the backend runs on Node.js + Express using MySQL as the database, securing routes with authentication middleware.",
+        "es": "Proyecto de blog full-stack que permite registro e inicio de sesión con JWT. El frontend está hecho en Vue 3 y Vite + Bootstrap y el backend corre en Node.js + Express usando MySQL como Base de Datos, protegiendo las rutas con un middleware de autenticación."
+      },
+      icons: ["FaHtml5", "FaBootstrap", "FaJs", "FaVuejs", "FaNode"],
+      github: 'https://github.com/matiasmontonee/blog'
+    },
+    {
       images: [Safenest1, Safenest2, Safenest3, Safenest4],
       title: "Safenest",
       "description": {
@@ -77,38 +87,6 @@ const projects = [
       tailwindIcon: TailwindIcon
     },
     {
-      images: [Tenis1, Tenis2, Tenis3, Tenis4],
-      title: "TeniShop",
-      "description": {
-        "en": "Website for sales of tennis rackets. It includes three types of user, shopping cart, administration panel, dashboard and payment gateway with Mercado Pago Sandbox.",
-        "es": "Sitio de ventas de raquetas de tenis. Incluye tres tipos de usuario, carrito de compras, panel de administración, dashboard y pasarela de pago con Mercado Pago Sandbox."
-      },
-      icons: ["FaHtml5", "FaCss3", "FaBootstrap", "FaPhp", "FaLaravel"],
-      github: 'https://github.com/matiasmontonee/tenis-shop',
-    },
-    {
-      images: [Music1, Music2, Music3, Music4],
-      title: "Music Shop",
-      "description": {
-        "en": "Website for sales of cds. Includes home section, registration, contact, shopping cart, products, purchase record and administration panel.",
-        "es": "Sitio de ventas de cds. Incluye sección de inicio, registro, contacto, carrito de compras, productos, registro de compras y panel de administración."
-      },
-      icons: ["FaHtml5", "FaCss3", "FaPhp"],
-      github: 'https://github.com/matiasmontonee/music-shop',
-    },
-    {
-      images: [Sas1, Sas2, Sas3],
-      title: "Security and System",
-      "description": {
-      "en": "A website showcasing a user profile with sections such as About Me, Interests, and Contact. It is a technical test mainly developed with Next.js for the Security and System company.",
-      "es": "Página web que muestra un perfil de usuario con secciones como acerca de mí, intereses y contacto. Es una prueba técnica realizada principalmente con Next.js para la empresa Security and System."
-      },
-      icons: ["FaHtml5", "FaCss3", "FaJs", "FaReact"],
-      website: 'https://security-and-system.vercel.app/',
-      github: 'https://github.com/matiasmontonee/security_and_system',
-      tailwindIcon: NextIcon
-    },
-    {
       images: [Five1, Five2, Five3, Five4],
       title: "Five Stars",
       "description": {
@@ -118,29 +96,6 @@ const projects = [
       icons: ["FaHtml5", "FaCss3", "FaJs", "FaReact", "FaBootstrap",],
       website: 'https://five-stars-api.vercel.app',
       github: 'https://github.com/matiasmontonee/movieapi'
-    },
-    {
-      images: [Feather1, Feather2, Feather3, Feather4],
-      title: "Feather",
-      "description": {
-        "en": "Simulation of a virtual book store with DOM management. Includes products, details, category filter, shopping cart and payment gateway.",
-        "es": "Simulación de una librería virtual con gestión DOM. Incluye productos, detalles, filtro de categorías, carrito de compras y pasarela de pago."
-      },
-      icons: ["FaHtml5", "FaCss3", "FaJs"],
-      website: 'https://feather-store.vercel.app',
-      github: 'https://github.com/matiasmontonee/feather'
-    },
-    {
-      images: [Todo1, Todo2],
-      title: "To-do app",
-      "description": {
-        "en": "Simple app where you can write down pending tasks and then move them to completed. Tasks can be deleted in both sections.",
-        "es": "Aplicación sencilla donde puedes anotar tareas pendientes y luego pasarlas a completadas. Las tareas se pueden eliminar en ambas secciones."
-      },
-      icons: ["FaHtml5", "FaCss3", "FaJs", "FaReact"],
-      website: 'https://to-do-app-website.vercel.app',
-      github: 'https://github.com/matiasmontonee/to-do-app',
-      tailwindIcon: TailwindIcon 
     },
     {
       images: [Pokeapi1, Pokeapi2, Pokeapi3],
