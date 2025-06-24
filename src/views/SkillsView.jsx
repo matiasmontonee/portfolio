@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { FaArrowRight, FaDesktop, FaDatabase, FaPen } from 'react-icons/fa';
-import { useLanguage } from '../context/Language'; 
+import { useLanguage } from '../context/Language';
 import HtmlIcon from '../assets/imgs/skills/html5.png';
 import CssIcon from '../assets/imgs/skills/css3.png';
 import TailwindIcon from '../assets/imgs/skills/tailwind.png';
@@ -17,10 +17,8 @@ import MysqlIcon from '../assets/imgs/skills/mysql.png';
 import FirebaseIcon from '../assets/imgs/skills/firebase.png';
 import GitIcon from '../assets/imgs/skills/git.png';
 import GithubIcon from '../assets/imgs/skills/github.png';
-import InsomniaIcon from '../assets/imgs/skills/insomnia.png';
+import PostmanIcon from '../assets/imgs/skills/postman.png';
 import PsIcon from '../assets/imgs/skills/photoshop.png';
-import WhapifyIcon from '../assets/imgs/skills/whapify.png';
-import DopplerIcon from '../assets/imgs/skills/doppler.jpeg';
 import AsanaIcon from '../assets/imgs/skills/asana.png';
 
 const skillsData = [
@@ -40,10 +38,8 @@ const skillsData = [
   { name: 'Firebase', icon: FirebaseIcon },
   { name: 'Git', icon: GitIcon },
   { name: 'GitHub', icon: GithubIcon },
-  { name: 'Insomnia', icon: InsomniaIcon },
+  { name: 'Postman', icon: PostmanIcon },
   { name: 'Photoshop', icon: PsIcon },
-  { name: 'Whapify', icon: WhapifyIcon },
-  { name: 'Doppler', icon: DopplerIcon },
   { name: 'Asana', icon: AsanaIcon }
 ];
 

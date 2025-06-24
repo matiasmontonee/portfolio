@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaArrowRight, FaArrowUp, FaArrowDown, FaHtml5, FaCss3, FaJs, FaBootstrap, FaVuejs, FaReact, FaPhp, FaLaravel, FaGithub, FaExternalLinkAlt, FaTools } from 'react-icons/fa';
+import { FaArrowRight, FaArrowUp, FaArrowDown, FaHtml5, FaCss3, FaJs, FaBootstrap, FaVuejs, FaReact, FaPhp, FaLaravel, FaNode, FaGithub, FaExternalLinkAlt, FaTools } from 'react-icons/fa';
 import { useLanguage } from '../context/Language'; 
 import projects from '../data/projects';
 
@@ -61,6 +61,8 @@ const ProjectsView = () => {
           return <FaPhp key={index} className="mr-1" />;
         case "FaLaravel":
           return <FaLaravel key={index} className="mr-1" />;
+        case "FaNode":
+          return <FaNode key={index} className="mr-1" />;
         default:
           return null;
       }
@@ -108,7 +110,7 @@ const ProjectsView = () => {
                 </div>
                 <div className="flex items-end text-3xl sm:text-4xl">
                   <a href={project.github} className='github-hover' target="_blank" rel="noreferrer" aria-label='Repositorio en GitHub de Matías Montone'><FaGithub /></a>
-                  {index !== 3 && index !== 4 && (
+                  {index !== 2 && index !== 3 && (
                     <a href={project.website} className='web-hover ml-2 sm:ml-4' target="_blank" rel="noreferrer" aria-label='Sitio web de Matías Montone'><FaExternalLinkAlt /></a>
                   )}
                 </div>
