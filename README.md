@@ -1,15 +1,64 @@
-EN
+# Portfolio — Matías Montone
 
-Matías Montone's personal portfolio. Made with the objective of being able to show my projects and apply my knowledge, there is also the possibility of contacting me and learning a little about me.
+Sitio personal y portfolio profesional. Presenta mi perfil como Desarrollador Full Stack orientado a producto, con foco en e-commerce, SaaS y herramientas para merchants.
 
-Dependencies: React, React Icons, Reacts Scripts, React-intersection-observer and Tailwind CSS.
+**Sitio en producción:** [matiasmontone.vercel.app](https://matiasmontone.vercel.app)
 
-Host: https://matiasmontone.vercel.app
+## Stack
 
-ES
+- [Vue 3](https://vuejs.org/) + [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [simple-icons](https://simpleicons.org/) para iconos de tecnologías
+- i18n español / inglés
+- Tema claro y oscuro
 
-Portafolio personal de Matías Montone. Realizado con el objetivo de poder mostrar mis proyectos y aplicar mis conocimientos, también está la posibilidad de contactarme y conocer un poco sobre mí. 
+## Secciones
 
-Dependencias: React, React Icons, Reacts Scripts, React-intersection-observer y Tailwind CSS.
+- Inicio
+- Sobre mí (con descarga de CV)
+- Experiencia laboral y educación
+- Habilidades técnicas
+- Contacto
 
-Sitio: https://matiasmontone.vercel.app
+## Desarrollo local
+
+```bash
+npm install
+npm run dev
+```
+
+Abrí [http://localhost:5173](http://localhost:5173).
+
+## Build
+
+```bash
+npm run build    # genera dist/
+npm run preview  # previsualiza el build
+```
+
+No commitear `dist/` — es la salida de compilación.
+
+## Estructura del proyecto
+
+```
+portfolio-v2/
+├── public/              # Archivos estáticos servidos tal cual
+│   ├── img/profile.jpg
+│   ├── EN-MATIAS-MONTONE.pdf
+│   └── ES-MATIAS-MONTONE.pdf
+└── src/
+    ├── components/      # UI reutilizable (nav, cards, skeletons…)
+    ├── composables/     # Tema, idioma, scroll spy
+    ├── data/            # Experiencia y habilidades
+    ├── sections/        # Secciones de la página
+    ├── style.css        # Tokens de tema y estilos compartidos
+    └── App.vue
+```
+
+`style.css` define los tokens de tema y las clases que usa el proyecto (layout, navegación, cards, animaciones). El resto del estilo va con Tailwind en los templates.
+
+## Contacto
+
+- **Email:** matiasmontonedev@gmail.com
+- **LinkedIn:** [matiasmontone](https://www.linkedin.com/in/matiasmontone/)
+- **GitHub:** [matiasmontonee](https://github.com/matiasmontonee)
