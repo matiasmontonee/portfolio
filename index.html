@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matías Montone - Full Stack Developer</title>
+<meta name="description" content="Matías Montone — Desarrollador Full Stack orientado a producto, e-commerce, SaaS e integraciones Tiendanube. Buenos Aires, Argentina.">
+<meta name="author" content="Matías Montone">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://matiasmontone.vercel.app/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<meta name="theme-color" content="#fafafa">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://matiasmontone.vercel.app/">
+<meta property="og:title" content="Matías Montone — Full Stack Developer">
+<meta property="og:description" content="Portfolio profesional: experiencia en Lerentools, aplicaciones e-commerce y desarrollo web.">
+<meta property="og:image" content="https://matiasmontone.vercel.app/profile.jpg">
+<meta property="og:locale" content="es_AR">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Matías Montone — Full Stack Developer">
+<meta name="twitter:description" content="Portfolio profesional: experiencia en Lerentools, aplicaciones e-commerce y desarrollo web.">
+<meta name="twitter:image" content="https://matiasmontone.vercel.app/profile.jpg">
+<script>
+(function () {
+  try {
+    var t = localStorage.getItem('portfolio-theme');
+    var dark = t === 'dark' || (t !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (dark) {
+      document.documentElement.classList.add('dark');
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0b1120');
+    }
+  } catch (e) {}
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Instrument+Sans:wght@500;600&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Instrument+Sans:wght@500;600&display=swap"></noscript>
+</head>
+<body>
+<script>
+if (!location.hash) {
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  window.scrollTo(0, 0);
+}
+</script>
+<div id="app"></div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Matías Montone",
+  "jobTitle": "Full Stack Developer",
+  "url": "https://matiasmontone.vercel.app",
+  "image": "https://matiasmontone.vercel.app/profile.jpg",
+  "email": "matiasmontonedev@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Buenos Aires",
+    "addressCountry": "AR"
+  },
+  "sameAs": [
+    "https://github.com/matiasmontonee",
+    "https://www.linkedin.com/in/matiasmontone/"
+  ],
+  "knowsAbout": ["Vue.js", "React", "PHP", "E-commerce", "Tiendanube", "SaaS"]
+}
+</script>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
