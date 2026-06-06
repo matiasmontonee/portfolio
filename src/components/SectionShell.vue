@@ -40,10 +40,10 @@ const { ready } = useSectionReady(sectionRef, {
       class="relative mx-auto max-w-6xl"
       :class="compactPad ? 'section-pad--hero' : 'section-pad'"
     >
-      <div v-show="!ready" aria-hidden="true" role="presentation">
+      <div v-if="!ready" aria-hidden="true" role="presentation">
         <slot name="skeleton" />
       </div>
-      <div v-show="ready">
+      <div v-else>
         <slot />
       </div>
     </div>
